@@ -1,6 +1,10 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+import Image from "next/image";
+import decorationImg from "@/app/assets/decoration.png";
+import giftPeekImg from "@/app/assets/gift-peek.png";
+import Background from "@/app/components/background";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -27,6 +31,22 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
+        <Background />
+        <Image
+          src={decorationImg}
+          alt="hero"
+          width={280}
+          height={280}
+          className="absolute left-0 top-0"
+        />
+        <Image
+          src={giftPeekImg}
+          alt="hero"
+          width={280}
+          height={300}
+          className="absolute right-0 bottom-0"
+        />
+
         {children}
       </body>
     </html>
