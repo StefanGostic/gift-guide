@@ -37,14 +37,14 @@ export default function RootLayout({
           alt="hero"
           width={280}
           height={280}
-          className="absolute left-0 top-0"
+          className="fixed left-0 top-0"
         />
         <Image
           src={giftPeekImg}
           alt="hero"
           width={280}
           height={300}
-          className="absolute right-0 bottom-0"
+          className="fixed right-0 bottom-0"
         />
 
         {children}

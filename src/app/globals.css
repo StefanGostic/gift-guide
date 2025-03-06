@@ -2,8 +2,30 @@
 
 :root {
   --background: #0f0244;
+  --foreground: #fffffe;
+  --scrollbar-thumb: #726794;
 }
 
 body {
   background: var(--background);
+  color: var(--foreground);
+  
+  /* Firefox */
+  scrollbar-width: thin;
+  scrollbar-color: var(--scrollbar-thumb) transparent;
+}
+
+/* WebKit browsers (Chrome, Safari, Edge) */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--scrollbar-thumb);
+  border-radius: 6px;
 }
